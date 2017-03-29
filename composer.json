@@ -1,0 +1,30 @@
+{
+  "name": "aliyunapi/php-aliyun-open-api-search",
+  "description": "aliyunsdk",
+  "keywords": [
+    "aliyun",
+    "aliyun sdk",
+    "search"
+  ],
+  "type": "library",
+  "license": "Apache",
+  "support": {
+    "issues": "https://github.com/aliyunapi/php-aliyun-open-api-search/issues",
+    "source": "https://github.com/aliyunapi/php-aliyun-open-api-search"
+  },
+  "authors": [
+    {
+      "name": "Xu TL",
+      "email": "xutongle@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.5.0",
+    "aliyunapi/guzzle-subscriber": "~1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "aliyun\\search\\": "src"
+    }
+  }
+}
