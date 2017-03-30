@@ -35,12 +35,17 @@ class Client
     /**
      * @var string API版本
      */
-    public $version = '2016-11-01';
+    public $version = 'v2';
 
     /**
      * @var string 网关地址
      */
-    public $baseUri = 'http://live.aliyuncs.com/';
+    public $baseUri;
+
+    /**
+     * @var HttpClient
+     */
+    private $_httpClient;
 
     /**
      * Client constructor.
@@ -58,7 +63,9 @@ class Client
         if (empty ($this->accessSecret)) {
             throw new \Exception ('The "accessSecret" property must be set.');
         }
-
+        if (empty ($this->baseUri)) {
+            throw new \Exception ('The "baseUri" property must be set.');
+        }
         if (empty ($this->appName)) {
             throw new \Exception ('The "appName" property must be set.');
         }
